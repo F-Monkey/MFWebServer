@@ -1,4 +1,4 @@
-package cn.monkey.gateway.components.dsl;
+package cn.monkey.gateway.dsl;
 
 import java.util.function.Function;
 import java.util.function.Predicate;

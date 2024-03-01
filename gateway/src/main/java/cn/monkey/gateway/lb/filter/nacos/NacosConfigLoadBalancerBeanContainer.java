@@ -6,7 +6,7 @@ import cn.monkey.gateway.lb.filter.LoadBalancerBeanContainer;
 import cn.monkey.gateway.lb.filter.LoadBalancerFilter;
 import cn.monkey.gateway.lb.filter.LoadBalancerFilterFactory;
 import cn.monkey.gateway.lb.filter.RequestKeyResolver;
-import cn.monkey.gateway.components.nacos.AbstractRefreshableNacosConfigSupport;
+import cn.monkey.gateway.nacos.AbstractRefreshableNacosConfigSupport;
 import com.alibaba.cloud.nacos.NacosConfigManager;
 import com.google.common.base.Strings;
 import com.google.common.collect.ImmutableList;

@@ -1,4 +1,4 @@
-package cn.monkey.gateway.components.dsl;
+package cn.monkey.gateway.dsl;
 
 public interface DuplexServerWebPredicateContainer extends RequestPredicateContainer, ResponsePredicateContainer {
 

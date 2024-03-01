@@ -1,6 +1,6 @@
 package cn.monkey.gateway.stream.ratelimit.config;
 
-import cn.monkey.gateway.components.dsl.RequestPredicateDefinition;
+import cn.monkey.gateway.dsl.RequestPredicateDefinition;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import java.util.Collection;

@@ -1,9 +1,9 @@
 package cn.monkey.gateway.stream.auth.config;
 
-import cn.monkey.gateway.components.dsl.Request;
-import cn.monkey.gateway.components.dsl.RequestPredicateContainer;
-import cn.monkey.gateway.components.dsl.RequestPredicateDefinition;
-import cn.monkey.gateway.components.dsl.ServerHttpRequestPredicateFactory;
+import cn.monkey.gateway.dsl.Request;
+import cn.monkey.gateway.dsl.RequestPredicateContainer;
+import cn.monkey.gateway.dsl.RequestPredicateDefinition;
+import cn.monkey.gateway.dsl.ServerHttpRequestPredicateFactory;
 import cn.monkey.gateway.stream.auth.DefaultAuthRequestPredicateContainer;
 import cn.monkey.gateway.stream.auth.rpc.RemoteAuthClient;
 import cn.monkey.gateway.stream.auth.AuthClient;

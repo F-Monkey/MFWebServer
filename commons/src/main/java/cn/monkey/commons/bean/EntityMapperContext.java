@@ -1,4 +1,4 @@
-package cn.monkey.commons.data;
+package cn.monkey.commons.bean;
 
 public interface EntityMapperContext {
     <T> T get(String key, Class<T> type);

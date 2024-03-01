@@ -1,8 +1,8 @@
 package cn.monkey.gateway.filter;
 
-import cn.monkey.gateway.components.dsl.Request;
-import cn.monkey.gateway.components.dsl.RequestPredicateDefinition;
-import cn.monkey.gateway.components.dsl.ServerHttpRequestPredicateFactory;
+import cn.monkey.gateway.dsl.Request;
+import cn.monkey.gateway.dsl.RequestPredicateDefinition;
+import cn.monkey.gateway.dsl.ServerHttpRequestPredicateFactory;
 import cn.monkey.commons.data.KVPair;
 import cn.monkey.commons.data.vo.Results;
 import com.google.common.base.Strings;

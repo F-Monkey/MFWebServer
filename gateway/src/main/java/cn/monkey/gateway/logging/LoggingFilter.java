@@ -1,6 +1,6 @@
 package cn.monkey.gateway.logging;
 
-import cn.monkey.gateway.components.dsl.DuplexServerWebPredicateContainer;
+import cn.monkey.gateway.dsl.DuplexServerWebPredicateContainer;
 import cn.monkey.gateway.logging.data.LoggingEntity;
 import cn.monkey.gateway.logging.data.Request;
 import cn.monkey.gateway.logging.data.Response;

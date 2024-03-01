@@ -49,7 +49,7 @@ public interface NetUtils {
         return source.contains("/**") ? ANT_PATH_MATCHER.match(source, target) : source.equals(target);
     }
 
-    static Object buildBody(ServerHttpRequest request) {
+    static Object buildRequestInfo(ServerHttpRequest request) {
         String path = request.getURI().getPath();
         HttpMethod method = request.getMethod();
         Resource resource = new Resource();

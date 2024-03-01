@@ -1,5 +1,6 @@
 package cn.monkey.extension.service;
 
+import cn.monkey.commons.bean.EntityMapper;
 import cn.monkey.commons.data.*;
 import cn.monkey.commons.data.vo.Result;
 import cn.monkey.commons.data.vo.Results;

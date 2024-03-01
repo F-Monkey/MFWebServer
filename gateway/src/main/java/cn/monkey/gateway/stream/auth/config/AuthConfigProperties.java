@@ -1,7 +1,7 @@
 package cn.monkey.gateway.stream.auth.config;
 
-import cn.monkey.gateway.components.dsl.Request;
-import cn.monkey.gateway.components.dsl.RequestPredicateDefinition;
+import cn.monkey.gateway.dsl.Request;
+import cn.monkey.gateway.dsl.RequestPredicateDefinition;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(prefix = AuthConfigProperties.CONFIGURATION_PROPERTIES_PREFIX)

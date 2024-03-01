@@ -14,7 +14,7 @@ public enum NodeDirection implements Serializable {
         this.name = name;
     }
 
-    public static NodeDirection valueof(String name) {
+    public static NodeDirection of(String name) {
         for (NodeDirection direction : values()) {
             if (direction.name.equals(name)) {
                 return direction;

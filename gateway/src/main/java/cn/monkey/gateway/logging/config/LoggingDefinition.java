@@ -1,7 +1,7 @@
 package cn.monkey.gateway.logging.config;
 
-import cn.monkey.gateway.components.dsl.RequestPredicateDefinition;
-import cn.monkey.gateway.components.dsl.ResponsePredicateDefinition;
+import cn.monkey.gateway.dsl.RequestPredicateDefinition;
+import cn.monkey.gateway.dsl.ResponsePredicateDefinition;
 import org.springframework.cloud.gateway.support.HasRouteId;
 
 import java.util.List;

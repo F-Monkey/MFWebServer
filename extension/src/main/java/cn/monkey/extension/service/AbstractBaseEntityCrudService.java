@@ -2,7 +2,7 @@ package cn.monkey.extension.service;
 
 import cn.monkey.commons.data.BaseEntity;
 import cn.monkey.commons.data.DataStatus;
-import cn.monkey.commons.data.EntityMapper;
+import cn.monkey.commons.bean.EntityMapper;
 import cn.monkey.commons.data.QueryRequest;
 import cn.monkey.commons.data.vo.Result;
 import cn.monkey.commons.data.vo.Results;

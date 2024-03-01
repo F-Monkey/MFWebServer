@@ -1,4 +1,4 @@
-package cn.monkey.commons.data;
+package cn.monkey.commons.bean;
 
 import cn.monkey.commons.util.ObjectUtil;
 import org.mapstruct.Named;

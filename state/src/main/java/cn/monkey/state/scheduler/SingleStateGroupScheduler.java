@@ -5,6 +5,8 @@ import cn.monkey.commons.bean.Refreshable;
 import cn.monkey.state.core.StateGroup;
 import cn.monkey.state.scheduler.strategy.WaitingStrategy;
 
+import java.lang.invoke.MethodHandles;
+import java.lang.invoke.VarHandle;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 
@@ -12,9 +14,16 @@ public class SingleStateGroupScheduler extends EventLoopScheduler implements Sta
 
     protected volatile StateGroup stateGroup;
 
-    protected static final AtomicReferenceFieldUpdater<SingleStateGroupScheduler, StateGroup> STATE_GROUP_UPDATER
-            = AtomicReferenceFieldUpdater.newUpdater(SingleStateGroupScheduler.class, StateGroup.class, "stateGroup");
+    protected static final VarHandle STATE_GROUP_UPDATER;
 
+    static {
+        MethodHandles.Lookup lookup = MethodHandles.lookup();
+        try {
+            STATE_GROUP_UPDATER = lookup.findVarHandle(SingleStateGroupScheduler.class, "stateGroup", StateGroup.class);
+        } catch (NoSuchFieldException | IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
+    }
     public SingleStateGroupScheduler(long id, WaitingStrategy waitingStrategy, ThreadFactory threadFactory) {
         super(id, waitingStrategy, threadFactory);
     }

@@ -1,4 +1,4 @@
-package cn.monkey.gateway.components.dsl;
+package cn.monkey.gateway.dsl;
 
 import cn.monkey.gateway.utils.NetUtils;
 import com.google.common.base.Strings;

@@ -51,7 +51,7 @@ public class RemoteAuthClient extends AbstractAuthClient {
         return webClient.post()
                 .uri(this.authConfigProperties.getRequest().getPath())
                 .headers(httpHeaders -> httpHeaders.addAll(NetUtils.buildJsonContentHeaders(request)))
-                .bodyValue(NetUtils.buildBody(request))
+                .bodyValue(NetUtils.buildRequestInfo(request))
                 .exchangeToMono(response -> {
                     HttpStatusCode httpStatusCode = response.statusCode();
                     ServerHttpResponse serverHttpResponse = exchange.getResponse();

@@ -11,7 +11,7 @@ public class Authorization implements Serializable {
 
     private String token;
     private String uid;
-    private String orgId;
+    private String tenantId;
     private String username;
     private String nickname;
     private String phoneNo;

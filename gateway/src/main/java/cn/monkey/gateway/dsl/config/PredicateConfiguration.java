@@ -1,9 +1,9 @@
-package cn.monkey.gateway.components.dsl.config;
+package cn.monkey.gateway.dsl.config;
 
-import cn.monkey.gateway.components.dsl.DefaultServerHttpRequestPredicateFactory;
-import cn.monkey.gateway.components.dsl.DefaultServerHttpResponsePredicateFactory;
-import cn.monkey.gateway.components.dsl.ServerHttpRequestPredicateFactory;
-import cn.monkey.gateway.components.dsl.ServerHttpResponsePredicateFactory;
+import cn.monkey.gateway.dsl.DefaultServerHttpRequestPredicateFactory;
+import cn.monkey.gateway.dsl.DefaultServerHttpResponsePredicateFactory;
+import cn.monkey.gateway.dsl.ServerHttpRequestPredicateFactory;
+import cn.monkey.gateway.dsl.ServerHttpResponsePredicateFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

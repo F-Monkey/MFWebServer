@@ -1,4 +1,4 @@
-package cn.monkey.gateway.components.dsl;
+package cn.monkey.gateway.dsl;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatusCode;

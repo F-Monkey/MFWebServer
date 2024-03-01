@@ -1,5 +1,6 @@
 package cn.monkey.orm.reactive.mongo;
 
+import cn.monkey.orm.reactive.ReactivePageableExecutionUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.ApplicationContext;
@@ -7,9 +8,11 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.core.ReactiveMongoOperations;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.repository.query.MongoEntityInformation;
 import org.springframework.data.mongodb.repository.support.SimpleReactiveMongoRepository;
 import org.springframework.lang.NonNull;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.io.Serializable;
@@ -31,7 +34,15 @@ public class SimpleReactiveMongoCrudRepository<T, ID extends Serializable> exten
 
     @Override
     public Mono<Page<T>> findPage(Pageable pageable) {
-        return null;
+        Query query = new Query();
+        query.with(pageable);
+        MongoEntityInformation<T, ID> entityInformation = this.getEntityInformation();
+        Class<T> type = entityInformation.getJavaType();
+        String collectionName = entityInformation.getCollectionName();
+        ReactiveMongoOperations mongoOperations = this.getMongoOperations();
+        Flux<T> flux = mongoOperations.find(query, type, collectionName);
+        return flux.collectList().flatMap(list -> ReactivePageableExecutionUtils.getPage(list, pageable, mongoOperations
+                .count(Query.of(query).limit(-1).skip(-1), type, collectionName)));
     }
 
     @Override

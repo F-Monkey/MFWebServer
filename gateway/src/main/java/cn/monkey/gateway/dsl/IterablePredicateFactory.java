@@ -1,4 +1,4 @@
-package cn.monkey.gateway.components.dsl;
+package cn.monkey.gateway.dsl;
 
 import com.google.common.base.Preconditions;
 import org.springframework.util.CollectionUtils;

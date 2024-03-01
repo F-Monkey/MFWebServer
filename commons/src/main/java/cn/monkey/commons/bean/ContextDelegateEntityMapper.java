@@ -1,4 +1,4 @@
-package cn.monkey.commons.data;
+package cn.monkey.commons.bean;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

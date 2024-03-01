@@ -1,6 +1,7 @@
 package cn.monkey.gateway.logging.config;
 
 import cn.monkey.gateway.components.dsl.*;
+import cn.monkey.gateway.dsl.*;
 import cn.monkey.gateway.logging.LoggingFilter;
 import cn.monkey.gateway.logging.LoggingRepository;
 import cn.monkey.gateway.logging.disruptor.DisruptorLoggingRepository;

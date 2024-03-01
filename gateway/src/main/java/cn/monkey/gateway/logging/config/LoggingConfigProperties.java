@@ -1,6 +1,6 @@
 package cn.monkey.gateway.logging.config;
 
-import cn.monkey.gateway.components.dsl.Request;
+import cn.monkey.gateway.dsl.Request;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import java.util.List;

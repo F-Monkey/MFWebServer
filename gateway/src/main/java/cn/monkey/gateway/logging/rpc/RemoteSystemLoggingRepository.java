@@ -1,6 +1,6 @@
 package cn.monkey.gateway.logging.rpc;
 
-import cn.monkey.gateway.components.dsl.Request;
+import cn.monkey.gateway.dsl.Request;
 import cn.monkey.gateway.logging.LoggingRepository;
 import cn.monkey.gateway.logging.config.LoggingConfigProperties;
 import cn.monkey.gateway.logging.data.LoggingEntity;

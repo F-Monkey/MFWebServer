@@ -1,7 +1,7 @@
 package cn.monkey.gateway.stream.auth;
 
 
-import cn.monkey.gateway.components.dsl.RequestPredicateContainer;
+import cn.monkey.gateway.dsl.RequestPredicateContainer;
 import cn.monkey.commons.data.vo.Result;
 import cn.monkey.commons.data.vo.Results;
 import cn.monkey.spring.web.HttpHeaderConstants;

@@ -1,4 +1,6 @@
-package cn.monkey.commons.data;
+package cn.monkey.commons.bean;
+
+import cn.monkey.commons.bean.EntityMapper;
 
 public interface NoOpEntityMapper<T> extends EntityMapper<T, T, T> {
     @Override

@@ -5,6 +5,8 @@ import cn.monkey.commons.bean.Refreshable;
 import cn.monkey.state.core.StateGroup;
 import cn.monkey.state.scheduler.strategy.WaitingStrategy;
 
+import java.lang.invoke.MethodHandles;
+import java.lang.invoke.VarHandle;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
@@ -17,8 +19,16 @@ public class SimpleStateGroupScheduler extends EventLoopScheduler implements Sta
 
     protected final int maxSize;
 
-    protected static final AtomicReferenceFieldUpdater<SimpleStateGroupScheduler, StateGroup> STATE_GROUP_UPDATER
-            = AtomicReferenceFieldUpdater.newUpdater(SimpleStateGroupScheduler.class, StateGroup.class, "currentAddStateGroup");
+    protected static final VarHandle STATE_GROUP_UPDATER;
+
+    static {
+        MethodHandles.Lookup lookup = MethodHandles.lookup();
+        try {
+            STATE_GROUP_UPDATER = lookup.findVarHandle(SimpleStateGroupScheduler.class, "currentAddStateGroup", StateGroup.class);
+        } catch (NoSuchFieldException | IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     protected SimpleStateGroupScheduler(long id,
                                         WaitingStrategy waitingStrategy,

@@ -1,4 +1,4 @@
-package cn.monkey.gateway.components.nacos;
+package cn.monkey.gateway.nacos;
 
 import cn.monkey.commons.util.ClassUtil;
 import cn.monkey.gateway.utils.ConfigurationUtils;

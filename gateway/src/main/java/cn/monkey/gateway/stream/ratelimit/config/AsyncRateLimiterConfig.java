@@ -1,7 +1,7 @@
 package cn.monkey.gateway.stream.ratelimit.config;
 
-import cn.monkey.gateway.components.dsl.RequestPredicateDefinition;
-import cn.monkey.gateway.components.dsl.ServerHttpRequestPredicateFactory;
+import cn.monkey.gateway.dsl.RequestPredicateDefinition;
+import cn.monkey.gateway.dsl.ServerHttpRequestPredicateFactory;
 import cn.monkey.gateway.stream.ratelimit.async.*;
 import cn.monkey.gateway.stream.ratelimit.async.local.GuavaReactiveRateLimiterFactory;
 import cn.monkey.gateway.stream.ratelimit.async.redisson.RedissonReactiveRateLimiterFactory;
